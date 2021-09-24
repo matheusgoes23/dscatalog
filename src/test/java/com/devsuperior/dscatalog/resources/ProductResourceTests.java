@@ -92,7 +92,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void findByIdShouldReturnNotFoundWhenIdDoesNotExists() throws Exception {
+    public void findByIdShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 
         ResultActions result =
                 mockMvc.perform(get("/products/{id}", nonExistingId)
@@ -136,7 +136,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void updateShouldReturnNotFoundWhenIdDoesNotExists() throws Exception {
+    public void updateShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
 
         String jsonBody = objectMapper.writeValueAsString(productDTO);
 
@@ -160,7 +160,7 @@ public class ProductResourceTests {
     }
 
     @Test
-    public void deleteShouldReturnNotFoundWhenIdDoesNotExists()throws Exception{
+    public void deleteShouldReturnNotFoundWhenIdDoesNotExist()throws Exception{
 
         ResultActions result =
                 mockMvc.perform(delete("/products/{id}", nonExistingId)

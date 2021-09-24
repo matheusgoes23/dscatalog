@@ -50,7 +50,7 @@ public class ProductRepositoryTests {
     }
 
     @Test
-    public void findByIdShouldReturnEmptyOptionalWhenIdDoesNotExists() {
+    public void findByIdShouldReturnEmptyOptionalWhenIdDoesNotExist() {
 
         Optional<Product> result = repository.findById(nonExistingId);
 
@@ -67,7 +67,7 @@ public class ProductRepositoryTests {
     }
 
     @Test
-    public void deleteShouldThrowEmptyResultDataAccessExceptionWhenIdDoesNotExists() {
+    public void deleteShouldThrowEmptyResultDataAccessExceptionWhenIdDoesNotExist() {
 
         assertThrows(EmptyResultDataAccessException.class, () -> {
             repository.deleteById(nonExistingId);
